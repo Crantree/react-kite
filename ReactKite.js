@@ -7,6 +7,8 @@ import {
   TextInput
 } from 'react-native';
 
+var Forecast = require('./Forecast');
+
 var ReactKite = React.createClass(
   {
   getInitialState()
@@ -33,7 +35,14 @@ var ReactKite = React.createClass(
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>You input {this.state.zip}</Text>
-        <TextInput style={styles.input} onSubmitEditing={this._handleTextChange} />
+        <Forecast 
+          main={this.state.forecast.main}
+          description={this.state.forecast.description}
+          temp={this.state.forecast.temp} />
+        <TextInput
+          style={styles.input}
+          returnKeyType='go'
+          onSubmitEditing={this._handleTextChange} />
       </View>
     );
   }
@@ -45,7 +54,7 @@ var styles = StyleSheet.create(
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#F5FCFF'
+      backgroundColor: '#4D4D4D'
     },
     welcome:{
       fontSize:20,

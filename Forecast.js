@@ -1,5 +1,5 @@
-//import React, { Component } from 'react';
-import React, {
+import React, { Component } from 'react';
+import {
   StyleSheet,
   Text,
   View
@@ -14,7 +14,7 @@ var Forecast = React.createClass(
                 <Text style={styles.bigText}>
                 {this.props.main}
                 </Text>
-                <Text styles={styles.mainText}>
+                <Text style={styles.mainText}>
                 Current Conditions: {this.props.description}
                 </Text>
                 <Text style={styles.bigText}>
