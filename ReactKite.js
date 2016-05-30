@@ -5,10 +5,12 @@ import {
   Text,
   View,
   TextInput,
-  Image
+  Image,
+  TouchableHighlight
 } from 'react-native';
 
 var Forecast = require('./Forecast');
+var ButtonOne = require('./ButtonOne');
 
 var ReactKite = React.createClass(
   {
@@ -58,7 +60,7 @@ var ReactKite = React.createClass(
       <View style={styles.overlay}>
         <View style={styles.row}>
           <Text style={styles.mainText}>
-          Current weather for</Text>
+          Current weather for </Text>
           <View style={styles.zipContainer}>
             <TextInput
             style={[styles.zipCode, styles.mainText]}
@@ -68,6 +70,7 @@ var ReactKite = React.createClass(
         </View>
         {content}
       </View>
+      <ButtonOne />
       </Image>
       </View>
     );
@@ -118,6 +121,24 @@ var styles = StyleSheet.create(
       flex:1,
       fontSize:baseFontSize,
       color: '#FFFFFF'
+    },
+    welcome:
+    {
+      fontSize: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#F5FCFF'
+    },
+    touchable:{
+      borderRadius:100
+    },
+    button:
+    {
+      backgroundColor: '#FF0000',
+      borderRadius: 100,
+      height: 200,
+      width: 200,
+      justifyContent: 'center'
     }
   }
 )
