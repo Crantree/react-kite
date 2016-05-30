@@ -12,7 +12,12 @@ var ReactKite = React.createClass(
   getInitialState()
   {
     return ({
-      zip: ''
+      zip: '',
+      forecast:{
+        main: 'Clouds',
+        description: 'few clouds',
+        temp: 45.7
+      }
     });
   },
   
