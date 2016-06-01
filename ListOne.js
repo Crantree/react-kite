@@ -14,7 +14,7 @@ var ListOne = React.createClass({
     
     render: function() {
     return (
-        <ListView
+        <ListView style={styles.container}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => <Text>{rowData}</Text>}
         />
@@ -23,9 +23,14 @@ var ListOne = React.createClass({
 });
 
 var styles = StyleSheet.create({
+    container:
+    {
+        borderColor:'#0000FF',
+        backgroundColor:'#55FFFF',
+    },
     row:{
         fontSize: 20,
-        backgroundColor:'#55FFFF',
+        backgroundColor:'#FFFFFF',
         color: '#000000'
     }
 });

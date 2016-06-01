@@ -14,6 +14,7 @@ import {
 var Forecast = require('./Forecast');
 var ButtonOne = require('./ButtonOne');
 var ListOne = require('./ListOne');
+var AlertOne = require('./AlertOne');
 
 var ReactKite = React.createClass(
   {
@@ -94,18 +95,6 @@ var ReactKite = React.createClass(
       />
     }
   />
-      <TouchableHighlight style={styles.wrapper}
-          onPress={() => Alert.alert(
-            'Alert Title',
-            'blah blah',
-            [
-              {text: 'OK', onPress: () => console.log('OK Pressed!')},
-            ]
-          )}>
-          <View style={styles.button}>
-            <Text>Alert with one button</Text>
-          </View>
-        </TouchableHighlight>
       </Image>
       </View>
     );
