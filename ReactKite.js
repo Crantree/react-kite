@@ -74,8 +74,6 @@ var ReactKite = React.createClass(
         </View>
         {content}
       </View>
-      <ButtonOne />
-      <ListOne />
       <Navigator
     initialRoute={{name: 'My First Scene', index: 0}}
     renderScene={(route, navigator) =>
