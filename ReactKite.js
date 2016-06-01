@@ -6,11 +6,14 @@ import {
   View,
   TextInput,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  Alert,
+  Navigator
 } from 'react-native';
 
 var Forecast = require('./Forecast');
 var ButtonOne = require('./ButtonOne');
+var ListOne = require('./ListOne');
 
 var ReactKite = React.createClass(
   {
@@ -71,6 +74,38 @@ var ReactKite = React.createClass(
         {content}
       </View>
       <ButtonOne />
+      <ListOne />
+      <Navigator
+    initialRoute={{name: 'My First Scene', index: 0}}
+    renderScene={(route, navigator) =>
+      <View
+        onForward={() => {
+          var nextIndex = route.index + 1;
+          navigator.push({
+            name: 'Scene ' + nextIndex,
+            index: nextIndex,
+          });
+        }}
+        onBack={() => {
+          if (route.index > 0) {
+            navigator.pop();
+          }
+        }}
+      />
+    }
+  />
+      <TouchableHighlight style={styles.wrapper}
+          onPress={() => Alert.alert(
+            'Alert Title',
+            'blah blah',
+            [
+              {text: 'OK', onPress: () => console.log('OK Pressed!')},
+            ]
+          )}>
+          <View style={styles.button}>
+            <Text>Alert with one button</Text>
+          </View>
+        </TouchableHighlight>
       </Image>
       </View>
     );
