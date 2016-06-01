@@ -32,8 +32,8 @@ var KiteFirst = React.createClass({
 
 var styles = StyleSheet.create({
    container:{
-       backgroundColor: '#395925',
-       height:200
+       //backgroundColor: '#395925',
+       //height:200
    },
    toolbar:
    {

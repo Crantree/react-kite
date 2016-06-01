@@ -44,7 +44,7 @@ var styles = StyleSheet.create({
       flex:1,
       //height:400,
       alignItems: 'stretch',
-        backgroundColor: '#FF0000'
+        //backgroundColor: '#FF0000'
     }
 })
 
