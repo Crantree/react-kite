@@ -11,7 +11,7 @@ import {
 var KiteSecond = React.createClass({
   render() {
     return (
-      <View style={styles.Scontainer}>
+      <View style={styles.container}>
         <ToolbarAndroid style={styles.toolbar}
                         title={this.props.title}
                         navIcon={require('./images/ic_arrow_back_white_24dp.png')}
@@ -26,7 +26,7 @@ var KiteSecond = React.createClass({
 })
 
 var styles = StyleSheet.create({
-   Scontainer:{
+   container:{
        
       flex: 1,
       alignItems: 'stretch',

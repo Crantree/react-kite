@@ -15,17 +15,18 @@ var ReactKite = React.createClass(
   render() {
     return (
       <View style={styles.container}>
+      <Image source={require('./images/hospitalward.png')} resizeMode='cover' style={styles.backdrop}>
         <Text>Header</Text>
          <KiteNav></KiteNav>
         <Text>Footer</Text>
+        </Image>
       </View>
     );
   }
 });
 
 
-//<Image source={require('image!hospitalward')} resizeMode='cover' style={styles.backdrop}>
-//</Image>
+
 var styles = StyleSheet.create(
   {
     container: {

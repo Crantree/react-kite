@@ -18,13 +18,12 @@ var KiteFirst = React.createClass({
   render() {
       console.log('first render');
     return (
-      <View style={styles.Fcontainer}>
-      <Text style={styles.header}>This is first</Text>
+      <View style={styles.container}>
         <ToolbarAndroid style={styles.toolbar}
                         title={this.props.title}
                         titleColor={'#FFFFFF'}/>
         <TouchableHighlight onPress={this.navSecond}>
-          <Text style={styles.header}>Navigate to second screen</Text>
+          <Text style={styles.header}>SHOW DETAIL</Text>
         </TouchableHighlight>
       </View>
     );
@@ -32,13 +31,14 @@ var KiteFirst = React.createClass({
 });
 
 var styles = StyleSheet.create({
-   Fcontainer:{
+   container:{
        backgroundColor: '#395925',
        height:200
    },
    toolbar:
    {
-       
+       height:50,
+       width:200
    }
   ,
   header:{
