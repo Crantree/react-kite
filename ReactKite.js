@@ -10,10 +10,7 @@ import {
 } from 'react-native';
 
 var Forecast = require('./Forecast');
-var ButtonOne = require('./ButtonOne');
-var ListOne = require('./ListOne');
-var AlertOne = require('./AlertOne');
-var NavigatorOne = require('./NavigatorOne');
+var KiteTab = require('./Components/KiteTab');
 
 var ReactKite = React.createClass(
   {
@@ -73,7 +70,6 @@ var ReactKite = React.createClass(
         </View>
         {content}
       </View>
-      
       </Image>
       </View>
       
